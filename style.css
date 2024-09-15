@@ -1,0 +1,174 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f9f9f9;
+    overflow-x: hidden;
+}
+
+header {
+    text-align: center ;
+    padding: 20px;
+    background-color: #ff6f61;
+    color: white;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.2em;
+    text-align: justify;
+}
+
+#hero {
+    position: relative;
+    overflow: hidden;
+    height: 40vh;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#hero img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    animation: fadeIn 3s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+}
+
+.hero-content h2 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+#about p {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+#gallery {
+    padding: 20px;
+    background: #fafafa;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: scaleIn 1s ease-in-out;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.1);
+}
+
+#cta {
+    padding: 20px;
+    background: #ff6f61;
+    color: white;
+}
+
+#cta form {
+    max-width: 500px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#cta label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+#cta input, #cta textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#cta button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#cta button:hover {
+    background-color: #e55b50;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes flowerAnimation {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.7; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.flower {
+    position: absolute;
+    width: 100px;
+    height: auto;
+    opacity: 0.7;
+    animation: flowerAnimation 5s infinite;
+}
+
+.flower:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
+.flower:nth-child(2) { top: 20%; left: 50%; animation-delay: 1s; }
+.flower:nth-child(3) { top: 50%; left: 30%; animation-delay: 2s; }
